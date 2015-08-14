@@ -1,17 +1,34 @@
-<%-- 
-    Document   : index
-    Created on : Aug 15, 2015, 12:45:54 AM
-    Author     : user
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="/struts-tags" prefix="s" %>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Login</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        
+        
+        <s:form action="LoginAction">
+        <table>
+            <tr> 
+                <td> Email: </td>
+                <td> <s:textfield name="email"/> </td>
+            </tr> <br>
+            <tr> 
+                <td> Password: </td>
+                <td> <s:password name="password"/> </td>
+            </tr> <br>
+            
+            <tr>
+                <td></td>
+                <td> <s:submit value="Login"/> </td>
+            </tr>
+            
+          
+        </table>
+            <s:property value="error"/> 
+      </s:form>
+        
     </body>
 </html>
